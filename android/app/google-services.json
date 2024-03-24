@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "572954299905",
+    "project_id": "risefarmer-959f9",
+    "storage_bucket": "risefarmer-959f9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:572954299905:android:7088c7bb3cf90758cbba00",
+        "android_client_info": {
+          "package_name": "com.example.motionhack2024"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdYoJYy5IfDxF-D8oDyEtksJQwl1ApIvE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
