@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class DisplayPage extends StatelessWidget {
+  const DisplayPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: SafeArea(child: Text("Home")),
+      body: SafeArea(child: Text("Etalase")),
     );
   }
 }

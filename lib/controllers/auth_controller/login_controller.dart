@@ -1,8 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
+import 'package:get/get.dart';
 import 'package:motionhack2024/config/colors.dart';
+import 'package:motionhack2024/pages/app_page.dart';
 
 class LoginController extends GetxController {
   TextEditingController email = TextEditingController();
@@ -19,6 +20,7 @@ class LoginController extends GetxController {
       await auth.signInWithEmailAndPassword(email: email, password: password);
       Fluttertoast.showToast(
           msg: "Login berhasil", backgroundColor: primaryColor);
+      Get.offAll(() => const AppPage());
     } on FirebaseAuthException catch (ex) {
       if (ex.code == "invalid-credential") {
         Fluttertoast.showToast(

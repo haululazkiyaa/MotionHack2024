@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:motionhack2024/config/colors.dart';
-import 'package:motionhack2024/controller/auth_controller/signup_controller.dart';
-import 'package:motionhack2024/pages/auth/widgets/my_button.dart';
-import 'package:motionhack2024/pages/auth/widgets/my_text_field.dart';
+import 'package:motionhack2024/controllers/auth_controller/signup_controller.dart';
+import 'package:motionhack2024/widgets/my_button.dart';
+import 'package:motionhack2024/widgets/my_text_field.dart';
 
 class SignupPage extends StatelessWidget {
   const SignupPage({super.key});
