@@ -33,6 +33,7 @@ dependencies:
   firebase_core: ^2.27.1
   flutter:
     sdk: flutter
+  fluttertoast: ^8.2.4
   get: ^4.6.6
 
 dev_dependencies:

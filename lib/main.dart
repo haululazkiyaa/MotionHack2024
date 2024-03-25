@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
+import 'package:motionhack2024/config/routes.dart';
 import 'package:motionhack2024/firebase_options.dart';
 import 'package:motionhack2024/pages/auth/signup_page.dart';
 
@@ -16,9 +17,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: "RiseFarmer",
+      getPages: pages,
       home: SignupPage(),
     );
   }

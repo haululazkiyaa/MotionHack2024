@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:motionhack2024/config/colors.dart';
 
 class MyButton extends StatelessWidget {
   final String type;
@@ -14,13 +15,13 @@ class MyButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var primaryBtn = BoxDecoration(
-      color: const Color(0xFF66A320),
+      color: primaryColor,
       borderRadius: BorderRadius.circular(8),
     );
 
     var secondaryBtn = BoxDecoration(
       color: Colors.white,
-      border: Border.all(color: const Color(0xFF66A320)),
+      border: Border.all(color: primaryColor),
       borderRadius: BorderRadius.circular(8),
     );
 
@@ -36,8 +37,7 @@ class MyButton extends StatelessWidget {
               label,
               style: TextStyle(
                 fontSize: 20,
-                color:
-                    type == "primary" ? Colors.white : const Color(0xFF66A320),
+                color: type == "primary" ? Colors.white : primaryColor,
               ),
             )
           ],
