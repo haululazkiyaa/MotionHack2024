@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:motionhack2024/config/routes.dart';
 import 'package:motionhack2024/firebase_options.dart';
-import 'package:motionhack2024/pages/auth/login_page.dart';
+import 'package:motionhack2024/pages/app_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "RiseFarmer",
       getPages: pages,
-      home: LoginPage(),
+      home: AppPage(),
     );
   }
 }
