@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:get/route_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:motionhack2024/pages/pasar/ulasan.dart';
+import 'package:motionhack2024/pages/profile/edit_profile.dart';
 
 import '../../config/colors.dart';
 
@@ -34,7 +37,7 @@ class PasarPopup extends StatelessWidget {
                       child: Icon(Icons.arrow_back)),
                 ),
                 Text(
-                  "Lacak Pesanan",
+                  "Produk",
                   style: GoogleFonts.roboto(
                     fontSize: 24,
                     fontWeight: FontWeight.w500,
@@ -187,13 +190,18 @@ class PasarPopup extends StatelessWidget {
             height: 60,
             child: Row(
               children: [
-                Container(
-                  width: 100,
-                  height: 60,
-                  color: ijoTerangBanget,
-                  child: Icon(
-                    Icons.chat,
-                    color: primaryColor,
+                InkWell(
+                  onTap: () {
+                    Get.toNamed(UlasanPage.routeName);
+                  },
+                  child: Container(
+                    width: 100,
+                    height: 60,
+                    color: ijoTerangBanget,
+                    child: Icon(
+                      Icons.chat,
+                      color: primaryColor,
+                    ),
                   ),
                 ),
                 Container(
