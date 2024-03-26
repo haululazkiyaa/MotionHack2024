@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:motionhack2024/config/colors.dart';
+import 'package:motionhack2024/pages/display_page.dart';
+import 'package:motionhack2024/pages/market_page.dart';
 import 'package:motionhack2024/widgets/home/artikel_item.dart';
 
 class HomePage extends StatelessWidget {
@@ -51,70 +54,78 @@ class HomePage extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Container(
-                            margin: EdgeInsets.only(left: 33),
-                            height: 98,
-                            width: 154,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8),
-                              color: Color(0xFFD9F0BF),
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.all(15),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text("Pasar Beras",
-                                      style: GoogleFonts.roboto(
-                                          fontSize: 16, color: fontDarkIjo1)),
-                                  Row(
-                                    children: [
-                                      Text(
-                                        "Tempat membeli\nberas",
+                          InkWell(
+                            onTap: () => Get.to(MarketPage()),
+                            child: Container(
+                              margin: EdgeInsets.only(left: 33),
+                              height: 98,
+                              width: 154,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8),
+                                color: Color(0xFFD9F0BF),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(15),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text("Pasar Beras",
                                         style: GoogleFonts.roboto(
-                                            fontSize: 10, color: fontDarkIjo2),
-                                      ),
-                                      Icon(
-                                        Icons.house_siding_sharp,
-                                        size: 45,
-                                        color: fontDarkIjo1,
-                                      )
-                                    ],
-                                  )
-                                ],
+                                            fontSize: 16, color: fontDarkIjo1)),
+                                    Row(
+                                      children: [
+                                        Text(
+                                          "Tempat membeli\nberas",
+                                          style: GoogleFonts.roboto(
+                                              fontSize: 10,
+                                              color: fontDarkIjo2),
+                                        ),
+                                        Icon(
+                                          Icons.house_siding_sharp,
+                                          size: 45,
+                                          color: fontDarkIjo1,
+                                        )
+                                      ],
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
                           ),
-                          Container(
-                            margin: EdgeInsets.only(right: 33),
-                            height: 98,
-                            width: 154,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(8),
-                                color: Color(0xFFD9F0BF)),
-                            child: Padding(
-                              padding: const EdgeInsets.all(15),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text("Etalase Beras",
-                                      style: GoogleFonts.roboto(
-                                          fontSize: 16, color: fontDarkIjo1)),
-                                  Row(
-                                    children: [
-                                      Text(
-                                        "Tempat menjual\nberas",
+                          InkWell(
+                            onTap: () => Get.to(DisplayPage()),
+                            child: Container(
+                              margin: EdgeInsets.only(right: 33),
+                              height: 98,
+                              width: 154,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8),
+                                  color: Color(0xFFD9F0BF)),
+                              child: Padding(
+                                padding: const EdgeInsets.all(15),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text("Etalase Beras",
                                         style: GoogleFonts.roboto(
-                                            fontSize: 10, color: fontDarkIjo2),
-                                      ),
-                                      Icon(
-                                        Icons.list_alt,
-                                        size: 45,
-                                        color: fontDarkIjo1,
-                                      )
-                                    ],
-                                  )
-                                ],
+                                            fontSize: 16, color: fontDarkIjo1)),
+                                    Row(
+                                      children: [
+                                        Text(
+                                          "Tempat menjual\nberas",
+                                          style: GoogleFonts.roboto(
+                                              fontSize: 10,
+                                              color: fontDarkIjo2),
+                                        ),
+                                        Icon(
+                                          Icons.list_alt,
+                                          size: 45,
+                                          color: fontDarkIjo1,
+                                        )
+                                      ],
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
                           )
