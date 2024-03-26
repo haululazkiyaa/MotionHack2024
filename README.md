@@ -1,6 +1,6 @@
 # motionhack2024
 
-A new Flutter project.
+RiseFarmer, cek branch reza dan haulul untuk progress!
 
 ## Getting Started
 
