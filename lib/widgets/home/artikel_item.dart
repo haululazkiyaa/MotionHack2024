@@ -27,6 +27,7 @@ class ArtikelItem extends StatelessWidget {
               "Beli Beras langsung dari\n Petani, Dapat Harga Murah dan\nKesegaran Terjamin",
               style:
                   GoogleFonts.roboto(fontSize: 12, fontWeight: FontWeight.w500),
+              overflow: TextOverflow.ellipsis,
             )
           ],
         ),
