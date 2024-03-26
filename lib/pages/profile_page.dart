@@ -1,8 +1,11 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:motionhack2024/config/colors.dart';
 import 'package:motionhack2024/controllers/auth_controller/session_controller.dart';
+import 'package:motionhack2024/controllers/user_controller/userdata_controller.dart';
 import 'package:motionhack2024/pages/profile/lacak_pesanan.dart';
 import 'package:motionhack2024/widgets/profile/profile_options.dart';
 
@@ -14,6 +17,29 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
+  final _db = FirebaseFirestore.instance;
+
+  String? uid = FirebaseAuth.instance.currentUser?.uid;
+  String nama = "User";
+  String email = "Email";
+
+  handleGetName() async {
+    final data =
+        await _db.collection('Users').where("uid", isEqualTo: uid).get();
+    final userData = data.docs[0].data() as Map<String, dynamic>;
+    setState(() {
+      nama = userData["name"];
+      email = userData["email"];
+    });
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    handleGetName();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +57,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   width: 1,
                 ),
                 Text(
-                  "Member",
+                  "nama",
                   style: GoogleFonts.roboto(
                       fontSize: 24, fontWeight: FontWeight.w500),
                 ),
@@ -65,7 +91,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   Column(
                     children: [
                       Text(
-                        "nama",
+                        nama,
                         style: GoogleFonts.roboto(
                             fontSize: 20, fontWeight: FontWeight.w500),
                       ),
@@ -76,7 +102,7 @@ class _ProfilePageState extends State<ProfilePage> {
                             size: 20,
                           ),
                           Text(
-                            "Kab. Bandung",
+                            email,
                             style: GoogleFonts.roboto(
                                 fontSize: 15, color: Color(0xFF666666)),
                           )
