@@ -57,7 +57,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   width: 1,
                 ),
                 Text(
-                  "nama",
+                  "Profile",
                   style: GoogleFonts.roboto(
                       fontSize: 24, fontWeight: FontWeight.w500),
                 ),
