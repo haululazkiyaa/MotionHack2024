@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:motionhack2024/config/colors.dart';
+import 'package:motionhack2024/widgets/etalase/etalase_item.dart';
 import 'package:motionhack2024/widgets/pasar/pasar_item.dart';
 
 class DisplayPage extends StatelessWidget {
@@ -9,6 +10,14 @@ class DisplayPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Handle the button press
+        },
+        shape: CircleBorder(),
+        child: Icon(Icons.add),
+        backgroundColor: primaryColor,
+      ),
       body: SafeArea(
           child: Expanded(
         child: Column(
@@ -75,16 +84,17 @@ class DisplayPage extends StatelessWidget {
               child: GridView.count(
                 crossAxisCount: 2,
                 childAspectRatio: 0.8,
+                crossAxisSpacing: 8,
                 // physics: NeverScrollableScrollPhysics(),
                 children: [
-                  PasarItem(),
-                  PasarItem(),
-                  PasarItem(),
-                  PasarItem(),
-                  PasarItem(),
-                  PasarItem(),
-                  PasarItem(),
-                  PasarItem(),
+                  EtalaseItem(),
+                  EtalaseItem(),
+                  EtalaseItem(),
+                  EtalaseItem(),
+                  EtalaseItem(),
+                  EtalaseItem(),
+                  EtalaseItem(),
+                  EtalaseItem(),
                 ],
               ),
             ))
