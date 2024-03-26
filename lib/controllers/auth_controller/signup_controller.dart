@@ -35,7 +35,6 @@ class SignupController extends GetxController {
     } catch (ex) {
       Fluttertoast.showToast(
           msg: "Terjadi kesalahan", backgroundColor: Colors.red);
-      ;
     }
   }
 }

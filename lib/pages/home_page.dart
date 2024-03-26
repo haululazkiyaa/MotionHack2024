@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:motionhack2024/config/colors.dart';
 import 'package:motionhack2024/widgets/home/artikel_item.dart';
@@ -150,10 +148,12 @@ class HomePage extends StatelessWidget {
                       ),
                       Expanded(
                         child: Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 16),
+                          padding: EdgeInsets.symmetric(horizontal: 20),
                           child: GridView.count(
-                            crossAxisCount: 2,
                             childAspectRatio: 0.8,
+                            crossAxisCount: 2,
+                            crossAxisSpacing: 8,
+                            physics: NeverScrollableScrollPhysics(),
                             children: [
                               ArtikelItem(),
                               ArtikelItem(),
