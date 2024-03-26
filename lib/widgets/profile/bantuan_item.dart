@@ -3,8 +3,8 @@ import 'package:get/route_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 // import 'package:motionhack2024/pages/profile/lacak_pesanan.dart';
 
-class ProfileOptions extends StatelessWidget {
-  const ProfileOptions(
+class BantuanItem extends StatelessWidget {
+  const BantuanItem(
       {super.key, required this.text, required this.color, required this.page});
 
   final String text;
@@ -13,7 +13,7 @@ class ProfileOptions extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return InkWell(
       onTap: () {
         Get.toNamed(page);
       },
@@ -31,7 +31,7 @@ class ProfileOptions extends StatelessWidget {
             children: [
               Text(
                 text,
-                style: GoogleFonts.roboto(fontSize: 20, color: color),
+                style: GoogleFonts.roboto(fontSize: 14, color: color),
               ),
               Icon(
                 Icons.arrow_forward_ios_sharp,

@@ -1,13 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:get/route_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:motionhack2024/config/colors.dart';
+import 'package:motionhack2024/pages/pasar/filter_pasar.dart';
 import 'package:motionhack2024/widgets/pasar/pasar_item.dart';
 
 class MarketPage extends StatelessWidget {
   const MarketPage({super.key});
-
+  static const routeName = "/marketpage";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,15 +60,20 @@ class MarketPage extends StatelessWidget {
                       SizedBox(
                         width: 5,
                       ),
-                      Container(
-                        margin: EdgeInsets.only(right: 17),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            color: Color(0xFFD9F0BF)),
-                        child: Icon(
-                          Icons.format_list_bulleted_rounded,
-                          size: 45,
-                          color: Color(0xFF666666),
+                      InkWell(
+                        onTap: () {
+                          Get.toNamed(FilterPasar.routeName);
+                        },
+                        child: Container(
+                          margin: EdgeInsets.only(right: 17),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8),
+                              color: Color(0xFFD9F0BF)),
+                          child: Icon(
+                            Icons.format_list_bulleted_rounded,
+                            size: 45,
+                            color: Color(0xFF666666),
+                          ),
                         ),
                       )
                     ],

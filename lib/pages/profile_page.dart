@@ -1,11 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:motionhack2024/config/colors.dart';
-import 'package:motionhack2024/controllers/auth_controller/session_controller.dart';
-import 'package:motionhack2024/controllers/user_controller/userdata_controller.dart';
+import 'package:motionhack2024/pages/profile/bantuan.dart';
+import 'package:motionhack2024/pages/profile/edit_profile.dart';
 import 'package:motionhack2024/pages/profile/lacak_pesanan.dart';
 import 'package:motionhack2024/widgets/profile/profile_options.dart';
 
@@ -118,7 +117,7 @@ class _ProfilePageState extends State<ProfilePage> {
               ProfileOptions(
                 text: "Edit Profile",
                 color: Colors.black,
-                onTap: () {},
+                page: EditProfilePage.routeName,
               ),
               SizedBox(
                 height: 16,
@@ -126,7 +125,7 @@ class _ProfilePageState extends State<ProfilePage> {
               ProfileOptions(
                 text: "Lacak Pesanan",
                 color: Colors.black,
-                onTap: () => Get.toNamed(LacakPesanan.routeName),
+                page: LacakPesanan.routeName,
               ),
               SizedBox(
                 height: 16,
@@ -134,17 +133,17 @@ class _ProfilePageState extends State<ProfilePage> {
               ProfileOptions(
                 text: "Bantuan",
                 color: Colors.black,
-                onTap: () {},
+                page: BantuanPage.routeName,
               ),
               SizedBox(
                 height: 16,
               ),
-              ProfileOptions(
-                text: "Keluar",
-                color: Colors.red,
-                onTap: () => {
-                  SessionController.authInstance.signOut(),
-                },
+              InkWell(
+                child: ProfileOptions(
+                  text: "Keluar",
+                  color: Colors.red,
+                  page: "",
+                ),
               ),
               SizedBox(
                 height: 16,

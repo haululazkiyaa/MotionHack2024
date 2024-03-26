@@ -4,7 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:get/route_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:motionhack2024/config/colors.dart';
-import 'package:motionhack2024/widgets/pasar/pasar_popup.dart';
+import 'package:motionhack2024/pages/pasar/pasar_popup.dart';
 
 class PasarItem extends StatelessWidget {
   const PasarItem({super.key});
