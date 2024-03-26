@@ -5,6 +5,7 @@ import 'package:motionhack2024/pages/auth/signup_page.dart';
 import 'package:motionhack2024/pages/market_page.dart';
 import 'package:motionhack2024/pages/pasar/filter_pasar.dart';
 import 'package:motionhack2024/pages/pasar/pasar_popup.dart';
+import 'package:motionhack2024/pages/pasar/tambahulasan.dart';
 import 'package:motionhack2024/pages/pasar/ulasan.dart';
 import 'package:motionhack2024/pages/profile/bantuan.dart';
 import 'package:motionhack2024/pages/profile/edit_profile.dart';
@@ -22,5 +23,6 @@ var pages = [
   GetPage(name: MarketPage.routeName, page: () => MarketPage()),
   GetPage(name: BantuanPage.routeName, page: () => BantuanPage()),
   GetPage(name: EditProfilePage.routeName, page: () => EditProfilePage()),
-  GetPage(name: UlasanPage.routeName, page: () => UlasanPage())
+  GetPage(name: UlasanPage.routeName, page: () => UlasanPage()),
+  GetPage(name: TambahUlasan.routeName, page: () => TambahUlasan()),
 ];

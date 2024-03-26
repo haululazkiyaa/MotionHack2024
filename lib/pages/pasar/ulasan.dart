@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:motionhack2024/pages/pasar/tambahulasan.dart';
 import 'package:motionhack2024/widgets/pasar/ulasan_item.dart';
 
 import '../../config/colors.dart';
@@ -53,26 +55,28 @@ class UlasanPage extends StatelessWidget {
             Row(
               children: [
                 Flexible(
-                  child: Container(
-                    margin: EdgeInsets.symmetric(horizontal: 17),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8),
-                        color: Colors.grey.shade200),
-                    child: Row(
-                      children: [
-                        Expanded(
-                            child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
-                          child: TextField(
-                            decoration: InputDecoration(
-                                hintText: "Tulis Ulasan Anda...",
-                                border: InputBorder.none),
-                          ),
-                        )),
-                        SizedBox(
-                          width: 10,
-                        )
-                      ],
+                  child: InkWell(
+                    onTap: () {
+                      Get.toNamed(TambahUlasan.routeName);
+                    },
+                    child: Container(
+                      margin: EdgeInsets.symmetric(horizontal: 17),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8),
+                          color: Colors.grey.shade200),
+                      child: Row(
+                        children: [
+                          Expanded(
+                              child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 20, vertical: 10),
+                            child: Text("Tulis Ulasan Anda.."),
+                          )),
+                          SizedBox(
+                            width: 10,
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),
