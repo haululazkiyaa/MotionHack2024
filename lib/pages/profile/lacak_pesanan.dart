@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 // import 'package:get/route_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:motionhack2024/config/colors.dart';
+import 'package:motionhack2024/widgets/profile/lacak_pesanan_item.dart';
 // import 'package:motionhack2024/pages/profile_page.dart';
 
 class LacakPesanan extends StatelessWidget {
@@ -45,7 +46,13 @@ class LacakPesanan extends StatelessWidget {
                 )
               ],
             ),
-          )
+          ),
+          SizedBox(
+            height: 32,
+          ),
+          LacakPesananItem(),
+          LacakPesananItem(),
+          LacakPesananItem(),
         ],
       )),
     );

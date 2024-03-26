@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:motionhack2024/config/colors.dart';
+import 'package:motionhack2024/pages/profile/bantuan.dart';
+import 'package:motionhack2024/pages/profile/edit_profile.dart';
 import 'package:motionhack2024/pages/profile/lacak_pesanan.dart';
 import 'package:motionhack2024/widgets/profile/profile_options.dart';
 
@@ -90,7 +92,7 @@ class _ProfilePageState extends State<ProfilePage> {
               ProfileOptions(
                 text: "Edit Profile",
                 color: Colors.black,
-                page: "",
+                page: EditProfilePage.routeName,
               ),
               SizedBox(
                 height: 16,
@@ -106,7 +108,7 @@ class _ProfilePageState extends State<ProfilePage> {
               ProfileOptions(
                 text: "Bantuan",
                 color: Colors.black,
-                page: "",
+                page: BantuanPage.routeName,
               ),
               SizedBox(
                 height: 16,

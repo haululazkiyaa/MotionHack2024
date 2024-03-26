@@ -56,9 +56,7 @@ class HomePage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           InkWell(
-                            onTap: () {
-                              Get.toNamed(MarketPage.routeName);
-                            },
+                            onTap: () {},
                             child: Container(
                               margin: EdgeInsets.only(left: 33),
                               height: 98,
